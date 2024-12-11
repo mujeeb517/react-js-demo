@@ -6,6 +6,7 @@ import Header from './Header';
 import Footer from './Footer';
 import Result from './Result';
 import ProductList from './ProductList';
+import Counter from './Counter';
 
 function App() {
     // <div>
