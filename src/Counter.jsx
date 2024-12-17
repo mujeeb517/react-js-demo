@@ -8,6 +8,35 @@ class Counter extends React.Component {
         count: 10,
     }
 
+    // x1
+    constructor() {
+        super();
+        console.log('constructor');
+    }
+
+    // x1
+    componentDidMount() {
+        // api calls
+        console.log('did mount');
+    }
+
+    // xN
+    shouldComponentUpdate(props, state) {
+        console.log(props, state)
+        return state.count <= 20
+    }
+
+    // xN
+    componentDidUpdate() {
+        console.log('did update');
+    }
+
+    // x1
+    componentWillUnmount() {
+        // cleanup
+        console.log('will unmount');
+    }
+
     inc = () => {
         this.setState({
             count: this.state.count + 1
@@ -22,9 +51,9 @@ class Counter extends React.Component {
 
     render() {
         return <div>
-            <h3>{this.state.count}</h3>
-            <button onClick={this.inc}>++</button>
-            <button onClick={this.dec}>--</button>
+            <h3 className="text-xl font-bold">Count: {this.state.count}</h3>
+            <button className="bg-orange-500 px-4 py-2 text-white hover:bg-orange-600" onClick={this.inc}>++</button>
+            <button className="bg-orange-500 px-4 py-2 text-white hover:bg-orange-600 ml-2" onClick={this.dec}>--</button>
         </div>
     }
 }

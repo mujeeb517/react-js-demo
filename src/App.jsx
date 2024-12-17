@@ -7,6 +7,12 @@ import Footer from './Footer';
 import Result from './Result';
 import ProductList from './ProductList';
 import Counter from './Counter';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Home from './Home';
+import About from './About';
+import Contact from './Contact';
+import NotFound from './NotFound';
+import NewProduct from './NewProduct';
 
 function App() {
     // <div>
@@ -19,8 +25,23 @@ function App() {
 
     // return parent;
     return <div>
-        <ProductList />
-    </div>
+        <BrowserRouter>
+            <Header />
+            <main className="flex-grow">
+                <div className='h-screen flex-grow'>
+                    <Routes>
+                        <Route path="/" Component={Home} />
+                        <Route path="/about" Component={About} />
+                        <Route path="/contact" Component={Contact} />
+                        <Route path="/products" Component={ProductList} />
+                        <Route path="/products/new" Component={NewProduct} />
+                        <Route path="*" Component={NotFound} />
+                    </Routes>
+                </div>
+            </main>
+        </BrowserRouter>
+        <Footer />
+    </div >
 }
 
 export default App;
