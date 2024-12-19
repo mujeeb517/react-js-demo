@@ -13,6 +13,7 @@ import About from './About';
 import Contact from './Contact';
 import NotFound from './NotFound';
 import NewProduct from './NewProduct';
+import Login from './Login';
 
 function App() {
     // <div>
@@ -35,6 +36,7 @@ function App() {
                         <Route path="/contact" Component={Contact} />
                         <Route path="/products" Component={ProductList} />
                         <Route path="/products/new" Component={NewProduct} />
+                        <Route path="/login" Component={Login} />
                         <Route path="*" Component={NotFound} />
                     </Routes>
                 </div>
