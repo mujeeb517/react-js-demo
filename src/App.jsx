@@ -4,9 +4,7 @@
 import React from 'react';
 import Header from './Header';
 import Footer from './Footer';
-import Result from './Result';
 import ProductList from './ProductList';
-import Counter from './Counter';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from './Home';
 import About from './About';
